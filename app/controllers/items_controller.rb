@@ -73,6 +73,7 @@ class ItemsController < ApplicationController
 
   # DELETE /items/1
   # DELETE /items/1.xml
+  
   def destroy
     @item = Item.find(params[:id])
     @item.destroy

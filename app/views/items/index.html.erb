@@ -20,11 +20,11 @@
                 <%= link_to 'Edit', edit_item_path(item) %> |
                 <%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %>
             <% else %>
-                <%= button_to "Add to Cart", :controller => :Cart, :action => :add, :id => item %>
+                <%= button_to "Zum Einkaufswagen hinzufuegen", :controller => :Cart, :action => :add, :id => item %>
             <% end %>
         </div>
         <div class="price">
-            <%= number_to_currency(item.price, :unit => "&pound;") %>
+            <%= number_to_currency(item.price, :unit => "&euro; ") %>
         </div>
     </td>
   </tr>

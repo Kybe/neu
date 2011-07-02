@@ -16,7 +16,11 @@
                                                  :action => "about" %> |
           <%= link_to_unless_current "Contact Us",:controller => "site", 
                                                  :action => "contact" %>
-        </div>
+	  <%= link_to_unless_current "Register",:controller => "user", 
+                                                 :action => "register" %>
+	  <%= link_to_unless_current "Login",:controller => "user", 
+                                                 :action => "login" %>
+	   </div>
         <div style="text-align:right">
         
 		  <%= link_to_unless_current "Einkaufskorb",  :controller => "cart", 
@@ -30,10 +34,10 @@
           <% end %>
         </div>
       </div>
-      <div id="content">
-      	<% if flash[:notice] -%>
-        	<p style="color: green"><%= flash[:notice] %></p>
-		<% end -%>
+      <div id='content'>
+        <% if flash[:notice] -%>
+          <div id='notice'><%= flash[:notice] %></div>
+        <% end %>
         <%= yield %>
       </div>
     </div>

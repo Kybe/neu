@@ -208,3 +208,20 @@ div.progressBar div.background {
   height: 18px;
   width: 0%;
 }
+
+label
+{
+	width: 150px;
+	text-align: right;
+	float: left;
+	margin-top: 4px;
+}
+
+
+.fieldWithErrors
+{
+	display: inline;
+	border: solid 2px maroon;
+	background-color: red;
+}
+
